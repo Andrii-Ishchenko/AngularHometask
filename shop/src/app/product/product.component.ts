@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {Product} from '../product/product'
 import {Category} from '../enums/Category'
 
@@ -9,12 +9,12 @@ import {Category} from '../enums/Category'
 })
 export class ProductComponent implements OnInit {
 
-	public product: Product = new Product("CocaCola", "Cold drink", 15, Category.Drink, true);
+	@Input() product: Product;
 	
 	constructor() { }
 
 	ngOnInit() {	
-		console.dir(this.product);
+		
 	}
 
 }

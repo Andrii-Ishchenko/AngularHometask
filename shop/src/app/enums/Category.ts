@@ -1,7 +1,6 @@
 export enum Category {
 	None = 0,
-	Meat,
-	Vegetable,
+	Meal,
 	Dessert,
 	Drink
 }

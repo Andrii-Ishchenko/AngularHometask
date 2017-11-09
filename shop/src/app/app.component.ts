@@ -7,5 +7,5 @@ import {ProductComponent} from './product/product.component'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'My Angular5 Shop';
 }

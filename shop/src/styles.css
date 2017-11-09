@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+.smallcard{
+    margin-bottom: 1em;
+}
+nav.navbar{
+    margin-bottom: 20px;
+}

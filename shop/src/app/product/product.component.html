@@ -1,6 +1,35 @@
-
+<!-- 
 	<span>{{product.name}}</span> - <span>{{product.category}}</span> - <span>{{product.price}}</span>
 	<hr>
 	<span>{{product.description}}</span>
 	<br>
-	<span>Available: {{product.isAvailable}}</span>
+	<span>Available: {{product.isAvailable}}</span> -->
+
+<div class="card smallcard">
+	<div class="card-body">
+		<div class="card-title">
+			<h4>
+				{{product.name}}
+				<div class="float-right text-muted">
+						${{product.price}}
+					</div>		
+			</h4>	
+						
+		</div>
+		<div class="card-text">
+			<span class="text-muted"> {{product.getCategoryName()}} </span>
+		</div>
+		<div class="card-text">
+			{{product.description}}
+		</div>
+		<div class="card-text clearfix">
+			<ul class="list-inline float-right">
+				<li class="list-inline-item" 
+					*ngFor="let ingridient of product.ingridients;">
+					<span class="badge badge-warning">{{ingridient}}</span>
+				</li>
+			</ul>
+		</div>
+		<a href="#" class="card-link float-right">Add to Cart</a>	
+	</div>
+</div>
