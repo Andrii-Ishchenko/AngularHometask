@@ -1,2 +1,5 @@
-# AngularHometask
-Repository for doing home tasks as part of Angular5 course
+# Task 1
+This is small online-shop app based on angular 5 and Bootstrap.
+
+# Readme is in progress:
+I'm going finish this readme today. 
