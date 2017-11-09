@@ -20,7 +20,8 @@ export class ProductService {
                     Category.Dessert, 
                     true, 
                     ["crackers","sugar","butter", "cream cheese", "eggs", "vanilla"]),
-      new Product("English Breakfast","English Breakfast is the first meal of a day, most often eaten in the early morning before undertaking the day's work", 10, Category.Meal, false, ["bacon", "sausages", "eggs", "coffee"])
+	  new Product("English Breakfast","English Breakfast is the first meal of a day, most often eaten in the early morning before undertaking the day's work", 10, Category.Meal, true, ["bacon", "sausages", "eggs", "coffee"]),
+	  new Product("Sushi","Sushi is a traditional food from Japan made with specially prepared rice, seafoods and vegetables.", 18,Category.Meal, false, ["rice","vinegar", "nori", "seafood"])
 
     ];
   }

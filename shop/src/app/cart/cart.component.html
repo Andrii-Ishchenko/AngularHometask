@@ -1,0 +1,44 @@
+
+<div *ngIf="cartItems.length > 0; else blankCart">
+	<div class="card smallcard" *ngFor="let ci of cartItems">
+		<div class="card-body">
+			<div class="card-title">
+				<span class=".h4">
+					{{ci.product.name}}		
+				</span>
+				<span  class=".h4 float-right text-muted">
+					{{ci.product.getCategoryName()}} 
+			</span>	
+			</div>
+			<div class="card-text">
+				<span class="text-muted">${{ci.product.price}} </span>
+				<span class=".h4"> 
+					x{{ci.quantity}}
+				</span>
+				<span  class=".h4 float-right text-muted">
+					${{ci.product.price * ci.quantity}}
+				</span>	
+			</div>
+	
+		</div>
+	</div>
+	<div class="card" *ngIf="total > 0">
+		<div class="card-footer clearfix">
+			<button type="button" class="btn btn-success" (click)="buy()">Buy</button>
+			<span class="align-middle float-right ">
+				Total : ${{total}}
+			</span>
+		</div>
+	</div>
+</div>
+<ng-template #blankCart>
+	<div class="card text-centered">
+		<div class="card-body">
+			<div class="card-title">
+				Your cart is empty.
+			</div>
+		</div>
+	</div>
+</ng-template>
+
+

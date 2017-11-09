@@ -30,6 +30,10 @@
 				</li>
 			</ul>
 		</div>
-		<a href="#" class="card-link float-right">Add to Cart</a>	
+		<a href="#" class="card-link float-right" (click)="addToCart(product)" *ngIf="product.isAvailable; else notAvailable">Add to Cart</a>
+		<ng-template #notAvailable>
+			<span class="text-muted" #notAvailable> Currently, this product is not available.</span>
+		</ng-template>
+			
 	</div>
 </div>
