@@ -1,7 +1,9 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, HostListener } from '@angular/core';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 import { CartService } from '../../cart/cart.service';
+import { ProductCommunicationService } from '../product-communication.service';
+
 
 @Component({
   selector: 'product',
@@ -12,12 +14,18 @@ import { CartService } from '../../cart/cart.service';
 export class ProductComponent implements OnInit {
 
 	@Output()
-  notifyChanged : EventEmitter<null> = new EventEmitter();
+	notifyChanged : EventEmitter<null> = new EventEmitter();
 
-  @Input()
-  product : Product;
+	@Input()
+	product : Product;
 
-  constructor(private cartService : CartService) { }
+	@HostListener('click',['$event']) 
+	select(event){
+		console.log("select " + this.product.name);
+		this.productCommunicationService.push(this.product);
+	}
+
+  constructor(private productCommunicationService : ProductCommunicationService, private cartService : CartService) { }
 
   ngOnInit() {
   }
