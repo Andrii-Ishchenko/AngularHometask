@@ -1,3 +1,4 @@
-<h3>Product list:</h3> 
-<product *ngFor="let p of products" [product]="p"></product>
+<h3>Product list</h3> 
+<product *ngFor="let p of products" [product]="p" (notifyChanged)="onProductChanged($event)" ></product>
+<h4>Total cost : {{totalCost}}</h4>
 

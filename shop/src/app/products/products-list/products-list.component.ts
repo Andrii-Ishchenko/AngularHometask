@@ -10,11 +10,18 @@ import { Product } from '../product';
 export class ProductsListComponent implements OnInit {
 
   public products : Array<Product>;
+  public totalCost : number;
 
   constructor(private productService : ProductService) { }
 
   ngOnInit() {
-    this.products = this.productService.getProducts();
+	this.products = this.productService.getProducts();
+	this.totalCost = this.productService.getTotalCost()
+  }
+
+  onProductChanged(){
+	  console.log("onProductChanged - parrent");
+	this.totalCost = this.productService.getTotalCost();
   }
 
 }

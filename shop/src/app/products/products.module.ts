@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductService } from './product.service';
 import { ProductComponent } from './product/product.component';
+import { SelectedProductComponent } from './selected-product/selected-product.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  exports:[ProductsListComponent],
+  exports:[ProductsListComponent, SelectedProductComponent],
   providers: [ProductService],
-  declarations: [ProductsListComponent, ProductComponent]
+  declarations: [ProductsListComponent, ProductComponent, SelectedProductComponent]
 })
 export class ProductsModule { }

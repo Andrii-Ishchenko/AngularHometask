@@ -15,6 +15,6 @@
         <span class="text-muted">${{product.price}}</span>
         <span class="text-muted float-right" #inStockCapacity>In stock: {{product.capacity}}</span> 
     </p>
-    <a href="#" class="btn btn-primary float-right" click="addToCart(product)" #addButton> Add To Cart</a>
+    <a href="#/" class="btn btn-primary float-right" (click)="addToCart()" #addButton> Add To Cart</a>
   </div>
 </div>
