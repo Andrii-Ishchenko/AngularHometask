@@ -1,6 +1,6 @@
 <h3>Selected product</h3>
 <div class="card mb-2" #card *ngIf="product">
-	<img class="card-img-top" #image alt="Card image cap" src="{{source}}" >
+	<img class="card-img-top" #img alt="Card image cap">
 	<div class="card-body">
 	  <h4 class="card-title">{{ product.name }}</h4>
 	  <h6 class="card-subtitle mb-2 text-muted">{{ product.getCategoryName()}}</h6>
