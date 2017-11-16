@@ -1,7 +1,20 @@
-<div class="card product-card">
+<div class="card mb-2" #card>
   <div class="card-body">
     <h4 class="card-title">{{ product.name }}</h4>
+    <h6 class="card-subtitle mb-2 text-muted">{{ product.getCategoryName()}}</h6>
     <p class="card-text"> {{ product.description }} </p>
-    <a href="#" class="btn btn-primary float-right" click="addToCart(product)"> Add To Cart</a>
+    <div class="card-text clearfix">
+        <ul class="list-inline float-right">
+          <li class="list-inline-item" 
+            *ngFor="let genre of product.genres">
+            <span class="badge badge-warning">{{genre}}</span>
+          </li>
+        </ul>
+      </div>
+    <p class="card-text">
+        <span class="text-muted">${{product.price}}</span>
+        <span class="text-muted float-right" #inStockCapacity>In stock: {{product.capacity}}</span> 
+    </p>
+    <a href="#" class="btn btn-primary float-right" click="addToCart(product)" #addButton> Add To Cart</a>
   </div>
 </div>

@@ -15,4 +15,8 @@ export class Product {
 	canBeBought() : boolean {
 		return this.available && this.capacity > 0;
 	}
+
+	getCategoryName() : string {
+		return Category[this.category];
+	}
 }

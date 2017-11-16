@@ -7,6 +7,7 @@ import { OrdersModule } from './orders/orders.module';
 import { ProductsModule } from './products/products.module';
 
 import { AppComponent } from './app.component';
+import { ImageService } from './image/image.service';
 
 
 @NgModule({
@@ -14,13 +15,13 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-	BrowserModule,
-	EmailModule,
-	ProductsModule,
-	OrdersModule,
-	CartModule
+    BrowserModule,
+    EmailModule,
+    ProductsModule,
+    OrdersModule,
+    CartModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
