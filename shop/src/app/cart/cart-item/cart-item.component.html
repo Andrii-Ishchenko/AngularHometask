@@ -1,3 +1,17 @@
-<p>
-  {{cartItem.product.name}}({{cartItem.quantity}})
-</p>
+<div class="card mb-2">
+    <div class="card-body">
+      <span class="h5 card-title">{{ cartItem.product.name }}</span>
+      <span class="h5 card-title"> - ${{cartItem.product.price}}</span>
+      <span class="badge badge-info float-right">{{cartItem.quantity}}</span>   
+      <p class="card-text">
+          <span class="h6 card-subtitle mb-2 text-muted">{{ cartItem.product.getCategoryName()}}</span>
+          <strong class="float-right bold">${{cartItem.getTotalPrice()}}</strong>
+      </p>
+      <div>
+          <button class="btn btn-primary btn-sm" (click)="addOne()"> Add </button>
+          <button class="btn btn-primary btn-sm" (click)="removeOne()" > Remove </button>
+          <button class="btn btn-sm" (click)="removeAll()"> X </button> 
+      </div>
+
+    </div>
+</div>

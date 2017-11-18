@@ -21,7 +21,6 @@ export class ProductComponent implements OnInit {
 
 	@HostListener('click',['$event']) 
 	select(event){
-		console.log("select " + this.product.name);
 		this.productCommunicationService.push(this.product);
 	}
 
@@ -31,9 +30,8 @@ export class ProductComponent implements OnInit {
   }
 
   addToCart(){
-	this.cartService.addToCart(this.product);
-	console.log("Product "+ this.product.name +" was added to cart!");
-	this.notify();
+		this.cartService.addToCart(this.product);
+		this.notify();
   }
 
   notify(){

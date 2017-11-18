@@ -21,7 +21,7 @@ export class ProductsListComponent implements OnInit {
 
   onProductChanged(){
 	  console.log("onProductChanged - parrent");
-	this.totalCost = this.productService.getTotalCost();
+	  this.totalCost = this.productService.getTotalCost();
   }
 
 }

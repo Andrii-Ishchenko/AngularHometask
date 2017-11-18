@@ -1,6 +1,8 @@
 import { Category } from './category';
+import { IProduct } from './IProduct';
 
-export class Product {
+
+export class Product implements IProduct {
 
 	constructor(public name: string, 
 		public description : string, 

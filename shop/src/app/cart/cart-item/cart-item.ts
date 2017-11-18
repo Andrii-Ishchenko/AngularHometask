@@ -6,4 +6,10 @@ export class CartItem {
 
 	}
 
+	getTotalPrice() : number{
+		return this.product.price * this.quantity;
+	}
+
+	
+
 }

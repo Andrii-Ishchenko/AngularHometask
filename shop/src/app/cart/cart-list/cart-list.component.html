@@ -1,2 +1,4 @@
-<h3>Cart</h3>
-<cart-item *ngFor="let c of cartItems" [cartItem]="c"></cart-item>
+<h3>Cart </h3>
+<cart-item *ngFor="let c of cartItems" [cartItem]="c" (notifyParent)="onChildUpdated($event)"></cart-item>
+<h5>Total : {{ totalCount}} items</h5>
+<h5>Total Cost: {{totalCost}}</h5>
