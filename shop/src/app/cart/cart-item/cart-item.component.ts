@@ -11,6 +11,10 @@ import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 export class CartItemComponent implements OnInit, OnDestroy {
 
 
+	@HostListener('mouseenter')
+	onmouseenter(){
+		//todo:
+	}
 
 	@Input()
 	public cartItem : CartItem;
