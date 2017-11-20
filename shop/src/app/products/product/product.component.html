@@ -1,6 +1,6 @@
-<div class="card mb-2" #card>
+<div class="card mb-2" [ngClass]="setClasses()" #card>
   <div class="card-body">
-    <h4 class="card-title">{{ product.name }}  <a href="#/" class="btn btn-primary btn-sm float-right" (click)="addToCart()" #addButton> Add To Cart </a></h4>
+    <h4 class="card-title">{{ product.name }}  <a href="#/" class="btn btn-sm float-right" (click)="addToCart()" [ngClass]="setButtonClasses()"> Add To Cart </a></h4>
     <h6 class="card-subtitle mb-2 text-muted">{{ product.getCategoryName()}}</h6>
     <p class="card-text"> {{ product.description }} </p>
     <div class="card-text clearfix">
