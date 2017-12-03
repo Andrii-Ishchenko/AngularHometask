@@ -11,8 +11,8 @@ export class CartComponent implements OnInit {
 
 	cartItems: Array<CartItem>;
 
-	get total(): number {
-		return this.cartService.getTotal();
+	get totalCost(): number {
+		return this.cartService.getTotalCost();
 	}
 
 	constructor(private cartService: CartService) { }
@@ -26,7 +26,7 @@ export class CartComponent implements OnInit {
 		this.cartItems.forEach(element => {
 			console.log(element.product.name + " :  " + element.quantity + " x $" + element.product.price + " = " + element.product.price * element.quantity+"\n");
 		});
-		console.log("Total sum: $"+ this.total);
+		console.log("Total sum: $"+ this.totalCost);
 	}
 
 }
